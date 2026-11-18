@@ -64,13 +64,13 @@
 
         .receipt-preview-area { position: relative; margin-top: 15px; }
         
-        /* Semi-transparent lock overlay, user can see below */
+        /* Semi-transparent lock overlay */
         .lock-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(2px); z-index: 10; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 20px; padding: 20px; text-align: center; cursor: not-allowed; }
         .lock-overlay i { font-size: 30px; color: #ef4444; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
         .lock-overlay h3 { font-size: 16px; color: #111827; margin-bottom: 5px; font-weight: 800; background: #fff; padding: 2px 10px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .lock-overlay p { font-size: 12px; color: #374151; background: #fff; padding: 2px 10px; border-radius: 10px; }
 
-        /* --- PLANS POPUP (Shows on Generate click if not premium) --- */
+        /* --- PLANS POPUP --- */
         .plans-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 100; justify-content: center; align-items: center; padding: 20px; }
         .plans-modal.active { display: flex; }
         .plans-content { background: #fff; width: 100%; max-width: 400px; border-radius: 20px; padding: 25px 20px; position: relative; animation: slideUp 0.3s ease; }
@@ -87,7 +87,9 @@
         .receipt-wrapper { display: none; width: 100%; }
         .receipt-wrapper.show { display: block; }
 
-        /* Easypaisa (Kept exact style) */
+        /* ========================================= */
+        /* ========== 1. EASYPAISA STYLE =========== */
+        /* ========================================= */
         .ep-main-container { background: #d1fae5; width: 100%; border-radius: 16px; overflow: hidden; position: relative; display: flex; flex-direction: column; align-items: center; }
         .ep-top-section { padding: 40px 20px 10px; text-align: center; width: 100%; position: relative; }
         .ep-tick-container { position: relative; width: 120px; height: 120px; margin: 0 auto 20px auto; display: flex; justify-content: center; align-items: center; }
@@ -109,8 +111,9 @@
         .ep-success-text::before { left: -20px; transform: rotate(-45deg); }
         .ep-success-text::after { right: -20px; transform: rotate(45deg); }
         .ep-bottom-section { width: 100%; padding: 10px 20px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; flex-grow: 1; }
-        .ep-center-logo { width: 50px; height: 50px; background: #fff; border-radius: 50%; box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; justify-content: center; align-items: center; margin-bottom: 15px; padding: 4px; }
-        .ep-center-logo img { width: 100%; height: 100%; object-fit: contain; }
+        /* Updated Easypaisa Logo */
+        .ep-center-logo { width: 40px; height: 40px; background: #fff; border-radius: 50%; box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; justify-content: center; align-items: center; margin-bottom: 15px; padding: 4px; }
+        .ep-center-logo img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
         .ep-receiver-name { font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 4px; }
         .ep-receiver-acc { font-size: 14px; color: #6b7280; margin-bottom: 20px; }
         .ep-bottom-bar { width: 100%; background: transparent; padding: 0 20px 20px; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
@@ -118,7 +121,9 @@
         .ep-btn-icon { width: 45px; height: 45px; border: 1.5px solid #10b981; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #111827; font-size: 18px; background: transparent; cursor: pointer; }
         .ep-btn-whatsapp { width: 45px; height: 45px; background: #10b981; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #fff; font-size: 22px; border: none; cursor: pointer; }
 
-        /* JazzCash */
+        /* ========================================= */
+        /* ========== 2. JAZZCASH STYLE ============ */
+        /* ========================================= */
         .jc-wrapper { background: #f8f9fa; padding: 20px 15px; border-radius: 20px; width: 100%; display: flex; flex-direction: column; align-items: center; }
         .jc-top-logo-circle { width: 60px; height: 60px; border-radius: 50%; background: #fff; padding: 2px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); margin-bottom: 10px; display: flex; justify-content: center; align-items: center; border: 1px solid #fce4e4; }
         .jc-top-logo-circle img { width: 100%; height: 100%; border-radius: 50%; object-fit: contain; }
@@ -146,14 +151,83 @@
         .jc-footer { margin-top: 15px; font-size: 10px; color: #4b5563; font-weight: 500; display: flex; justify-content: center; align-items: center; gap: 4px; }
         .jc-footer img { width: 14px; height: 14px; border-radius: 50%; object-fit: contain; }
 
-        /* Placeholder styles for other receipts (Upaisa, etc.) to save space in this answer */
-        /* (Aapka pichla saara CSS yahan waise hi rahega, maine sirf main changes ke hisaab se classes update ki hain) */
-        
-        /* --- ADMIN STYLES --- */
-        .admin-select { padding: 5px; border-radius: 6px; border: 1px solid #ccc; font-size: 12px; margin-right: 5px; outline: none; }
-        .btn-admin { background: #10b981; color: white; border: none; padding: 5px 10px; border-radius: 6px; font-size: 11px; cursor: pointer; font-weight: bold; }
-        .btn-admin:hover { background: #059669; }
-        .user-row { border: 1px solid #e5e7eb; padding: 12px; border-radius: 8px; display: flex; flex-direction: column; gap: 8px; background: #f9fafb; }
+        /* ========================================= */
+        /* ========== 3. MEEZAN BANK STYLE ========= */
+        /* ========================================= */
+        .mz-wrapper { background: #ffffff; padding: 30px 20px; border-radius: 20px; width: 100%; display: flex; flex-direction: column; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        .mz-logo-top { width: 60px; height: 60px; margin-bottom: 10px; }
+        .mz-logo-top img { width: 100%; height: 100%; object-fit: contain; }
+        .mz-success-text { color: #00b259; font-size: 20px; font-weight: 700; margin-bottom: 15px; }
+        .mz-amount { color: #00b259; font-size: 38px; font-weight: 800; margin-bottom: 5px; }
+        .mz-date { color: #7b8390; font-size: 14px; font-weight: 500; margin-bottom: 25px; }
+        .mz-dashed-line { width: 100%; border-top: 2px dashed #e5e7eb; margin-bottom: 25px; }
+        .mz-account-row { width: 100%; display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+        .mz-acc-icon { width: 45px; height: 45px; border-radius: 50%; border: 2px solid #4a154b; padding: 3px; }
+        .mz-acc-icon img { width: 100%; height: 100%; object-fit: contain; }
+        .mz-acc-details { display: flex; flex-direction: column; }
+        .mz-acc-label { color: #7b8390; font-size: 13px; font-weight: 500; margin-bottom: 2px; }
+        .mz-acc-name { color: #111827; font-size: 16px; font-weight: 800; margin-bottom: 2px; }
+        .mz-acc-num { color: #7b8390; font-size: 14px; font-weight: 500; }
+        .mz-ref-section { width: 100%; text-align: center; margin-top: 15px; }
+        .mz-ref-text { color: #4b5563; font-size: 14px; font-weight: 500; margin-bottom: 5px; }
+        .mz-ref-text span { color: #111827; font-weight: 700; }
+        .mz-type-text { color: #7b8390; font-size: 14px; font-weight: 500; }
+
+        /* ========================================= */
+        /* ========== 4. NAYAPAY STYLE ============= */
+        /* ========================================= */
+        .np-wrapper { background: #f8f9fc; padding: 30px 15px; border-radius: 20px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+        .np-logo-top { width: 55px; height: 55px; margin-bottom: 10px; border-radius: 50%; background: #fff; padding: 2px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; justify-content: center; align-items: center;}
+        .np-logo-top img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
+        .np-name-top { font-size: 18px; font-weight: 800; color: #1f2937; margin-bottom: 2px; }
+        .np-bank-top { font-size: 13px; color: #6b7280; font-weight: 500; margin-bottom: 15px; }
+        .np-amount { font-size: 32px; font-weight: 800; color: #111827; margin-bottom: 5px; }
+        .np-date { font-size: 13px; color: #6b7280; font-weight: 500; margin-bottom: 20px; }
+        .np-card { background: #fff; border-radius: 16px; width: 100%; padding: 15px; margin-bottom: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+        .np-row { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 12px; }
+        .np-row:last-child { margin-bottom: 0; }
+        .np-label { color: #6b7280; font-weight: 500; }
+        .np-val { color: #111827; font-weight: 700; text-align: right; }
+        .np-border-top { border-top: 1px solid #f3f4f6; padding-top: 12px; margin-top: 12px; }
+        .np-add-info-title { font-size: 12px; font-weight: 700; color: #6b7280; margin-bottom: 12px; text-transform: uppercase; }
+        .np-footer { font-size: 13px; color: #6b7280; font-weight: 500; margin-top: 15px; }
+        .np-footer span { font-weight: 800; color: #111827; }
+
+        /* ========================================= */
+        /* ========== 5. SADAPAY STYLE ============= */
+        /* ========================================= */
+        .sp-wrapper { background: #f3f6f9; padding: 30px 15px 20px; border-radius: 20px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+        .sp-top-brand { display: flex; align-items: center; gap: 8px; margin-bottom: 15px; }
+        .sp-top-brand img { height: 18px; object-fit: contain; }
+        .sp-top-brand span { font-size: 16px; font-weight: 800; letter-spacing: 1px; color: #1f2937; }
+        .sp-card { background: #ffffff; border-radius: 24px; width: 100%; padding: 30px 20px; position: relative; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; align-items: center; margin-top: 25px; }
+        .sp-icon-circle { width: 60px; height: 60px; background: #ff6b6b; border-radius: 50%; display: flex; justify-content: center; align-items: center; border: 4px solid #fff; position: absolute; top: -30px; box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3); }
+        .sp-icon-circle i { color: #fff; font-size: 28px; }
+        .sp-amount { font-size: 36px; font-weight: 900; color: #111827; margin-top: 15px; margin-bottom: 15px; }
+        .sp-names { text-align: center; margin-bottom: 25px; }
+        .sp-names div { font-size: 16px; color: #111827; font-weight: 700; }
+        .sp-names div span { color: #6b7280; font-weight: 500; }
+        .sp-details-left { width: 100%; text-align: left; margin-bottom: 15px; }
+        .sp-label { font-size: 12px; color: #9ca3af; font-weight: 600; margin-bottom: 4px; }
+        .sp-val { font-size: 15px; color: #111827; font-weight: 700; }
+        .sp-footer-text { font-size: 11px; color: #9ca3af; font-weight: 600; letter-spacing: 1px; margin-top: 15px; }
+
+        /* ========================================= */
+        /* ========== 6. UPAISA STYLE ============== */
+        /* ========================================= */
+        .up-wrapper { background: #f4f5f7; padding: 25px 20px; border-radius: 20px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+        .up-header { font-size: 18px; font-weight: 800; color: #10b981; margin-bottom: 5px; }
+        .up-sub-header { font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 20px; }
+        .up-line { width: 100%; border-top: 1px solid #d1d5db; margin-bottom: 20px; }
+        .up-row { width: 100%; display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 14px; }
+        .up-label { color: #6b7280; font-weight: 500; }
+        .up-val { color: #111827; font-weight: 700; text-align: right; }
+        .up-val-orange { color: #ea580c; font-weight: 700; text-align: right; }
+        .up-total-row { border-top: 1px solid #d1d5db; padding-top: 15px; margin-top: 15px; font-size: 15px; font-weight: 800; color: #111827; display: flex; justify-content: space-between; width: 100%; margin-bottom: 0; }
+
+        /* --- DOWNLOAD BUTTON --- */
+        .btn-download { width: 100%; padding: 15px; background: #3b82f6; color: #fff; border: none; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 15px; display: flex; justify-content: center; align-items: center; gap: 8px; }
+
     </style>
 </head>
 <body>
@@ -174,7 +248,7 @@
             <input type="password" id="loginPass" class="auth-input" placeholder="Password">
             <button class="btn-main" onclick="login()">Login</button>
             <div class="auth-switch">Don't have an account? <span onclick="showScreen('signupScreen')">Sign Up</span></div>
-            <div class="auth-switch" style="margin-top: 10px; font-size: 11px;">Admin? <span onclick="showScreen('adminLoginScreen')">Login here</span></div>
+            <!-- Admin login removed -->
         </div>
 
         <!-- ================= SIGNUP SCREEN ================= -->
@@ -185,33 +259,6 @@
             <input type="password" id="signupPass" class="auth-input" placeholder="Create Password">
             <button class="btn-main" onclick="signup()">Sign Up</button>
             <div class="auth-switch">Already have an account? <span onclick="showScreen('loginScreen')">Login</span></div>
-        </div>
-
-        <!-- ================= ADMIN LOGIN SCREEN ================= -->
-        <div class="auth-screen" id="adminLoginScreen">
-            <div class="auth-title">Admin Panel</div>
-            <div class="error-msg" id="adminError">Invalid Admin Credentials!</div>
-            <input type="text" id="adminUser" class="auth-input" placeholder="Admin Username">
-            <input type="password" id="adminPass" class="auth-input" placeholder="Admin Password">
-            <button class="btn-main" style="background:#8b1c1c;" onclick="adminLogin()">Access Admin Panel</button>
-            <div class="auth-switch"><span onclick="showScreen('loginScreen')">Back to User Login</span></div>
-        </div>
-
-        <!-- ================= ADMIN DASHBOARD ================= -->
-        <div class="main-app" id="adminDashboard">
-            <div class="header">
-                <div class="user-info">
-                    <h4>Admin Panel</h4>
-                    <p>Manage Premium Users</p>
-                </div>
-                <button class="btn-logout" onclick="logout()">Logout</button>
-            </div>
-            <div class="plans-container" style="background: #fff; padding: 20px; border-radius: 16px;">
-                <div class="plans-title" style="font-size: 16px; font-weight: 800; margin-bottom: 15px; text-align: center;">Users List</div>
-                <div id="usersList" style="display:flex; flex-direction:column; gap:10px; max-height: 500px; overflow-y: auto;">
-                    <!-- Users list dynamically loaded -->
-                </div>
-            </div>
         </div>
 
         <!-- ================= MAIN USER APP ================= -->
@@ -258,11 +305,11 @@
             <div class="form-card">
                 <div class="form-title"><i class="fa-solid fa-pen-to-square"></i> Enter Details</div>
                 <div class="form-group"><label>Date & Time</label><input type="text" id="inputDate" value="Nov 16, 2026 | 8:01 PM" oninput="updateAll()"></div>
-                <div class="form-group"><label>Amount (Rs.)</label><input type="number" id="inputAmount" value="500" oninput="updateAll()"></div>
-                <div class="form-group"><label>Receiver Name</label><input type="text" id="inputReceiver" value="Muhammad Usama" oninput="updateAll()"></div>
-                <div class="form-group"><label>Receiver Account</label><input type="text" id="inputReceiverAcc" value="03458765896" oninput="updateAll()"></div>
-                <div class="form-group"><label>Sender Name</label><input type="text" id="inputSender" value="Ibad Khan" oninput="updateAll()"></div>
-                <div class="form-group"><label>Sender Account</label><input type="text" id="inputSenderAcc" value="03475044076" oninput="updateAll()"></div>
+                <div class="form-group"><label>Amount (Rs.)</label><input type="number" id="inputAmount" value="50000" oninput="updateAll()"></div>
+                <div class="form-group"><label>Receiver Name</label><input type="text" id="inputReceiver" value="Muhammad Younas" oninput="updateAll()"></div>
+                <div class="form-group"><label>Receiver Account</label><input type="text" id="inputReceiverAcc" value="03027625655" oninput="updateAll()"></div>
+                <div class="form-group"><label>Sender Name</label><input type="text" id="inputSender" value="Arslan" oninput="updateAll()"></div>
+                <div class="form-group"><label>Sender Account</label><input type="text" id="inputSenderAcc" value="0329xxx9951" oninput="updateAll()"></div>
                 <div class="form-group"><label>TID / Reference No.</label><input type="text" id="inputTid" value="096924867906" oninput="updateAll()"></div>
                 
                 <!-- GENERATE BUTTON -->
@@ -273,7 +320,7 @@
 
             <!-- RECEIPT PREVIEW AREA (With Lock Overlay) -->
             <div class="receipt-preview-area">
-                <!-- Lock Overlay (Transparent so they can see below) -->
+                <!-- Lock Overlay -->
                 <div class="lock-overlay" id="lockOverlay">
                     <i class="fa-solid fa-lock"></i>
                     <h3>Premium Locked</h3>
@@ -282,8 +329,33 @@
 
                 <!-- All Receipts (Hidden till generated/premium) -->
                 <div id="receiptDisplayArea" style="display:none;">
-                    <!-- Easypaisa -->
-                    <div class="receipt-wrapper show" id="receipt-easypaisa">
+                    
+                    <!-- 1. JAZZCASH -->
+                    <div class="receipt-wrapper" id="receipt-jazzcash">
+                        <div class="jc-wrapper" id="card-jazzcash">
+                            <div class="jc-top-logo-circle"><img src="https://i.postimg.cc/kGhyDwbF/jazzcash-com-pk-logo.png" alt="Logo"></div>
+                            <div class="jc-top-date" id="jc-date">Nov 16, 2026 | 8:01 PM</div>
+                            <div class="jc-top-status">Transaction Successful</div>
+                            <div class="jc-top-sub">Transferred to JazzCash</div>
+                            <div class="jc-card">
+                                <div class="jc-cut left"></div><div class="jc-cut right"></div>
+                                <div class="jc-amount" id="jc-amount">Rs. 50,000<sup>.00</sup></div>
+                                <div class="jc-transferred">transferred to</div>
+                                <div class="jc-receiver" id="jc-receiver">MUHAMMAD YOUNAS</div>
+                                <div class="jc-acc">Account # <span id="jc-receiverAcc">03027625655</span></div>
+                                <div class="jc-dashed"></div>
+                                <div class="jc-row"><span class="jc-label">Transaction Fee</span><span class="jc-badge">Free</span></div>
+                                <div class="jc-dashed"></div>
+                                <div class="jc-row"><span class="jc-label">From</span><div class="jc-from-right"><div class="jc-from-name" id="jc-sender">ARSLAN</div><div class="jc-from-acc">Account # <span id="jc-senderAcc">0329xxx9951</span></div></div></div>
+                                <div class="jc-dashed"></div>
+                                <div class="jc-tid-row"><span class="jc-label">TID</span><span class="jc-tid-val" id="jc-tid">096924867906</span></div>
+                            </div>
+                            <div class="jc-footer">Securely sent via <img src="https://i.postimg.cc/kGhyDwbF/jazzcash-com-pk-logo.png" alt="Logo"></div>
+                        </div>
+                    </div>
+
+                    <!-- 2. EASYPAISA -->
+                    <div class="receipt-wrapper" id="receipt-easypaisa">
                         <div class="ep-main-container" id="card-easypaisa">
                             <div class="ep-top-section">
                                 <div class="ep-tick-container">
@@ -292,13 +364,13 @@
                                     </div>
                                     <div class="ep-yellow-circle"><div class="ep-checkmark"></div></div>
                                 </div>
-                                <div class="ep-amount-top" id="ep-amount">Rs. 500<span>.00</span></div>
+                                <div class="ep-amount-top" id="ep-amount">Rs. 50,000<span>.00</span></div>
                                 <div class="ep-success-text">Successfully Sent to</div>
                             </div>
                             <div class="ep-bottom-section">
                                 <div class="ep-center-logo"><img src="https://i.postimg.cc/SK77cm9n/easypaisa-com-pk-logo.png" alt="Easypaisa"></div>
-                                <div class="ep-receiver-name" id="ep-receiver">Muhammad Usama</div>
-                                <div class="ep-receiver-acc" id="ep-receiverAcc">03458765896</div>
+                                <div class="ep-receiver-name" id="ep-receiver">Muhammad Younas</div>
+                                <div class="ep-receiver-acc" id="ep-receiverAcc">03027625655</div>
                             </div>
                             <div class="ep-bottom-bar">
                                 <button class="ep-btn-home">Back to home</button>
@@ -308,35 +380,137 @@
                         </div>
                     </div>
 
-                    <!-- JazzCash -->
-                    <div class="receipt-wrapper" id="receipt-jazzcash">
-                        <div class="jc-wrapper" id="card-jazzcash">
-                            <div class="jc-top-logo-circle"><img src="https://i.postimg.cc/kGhyDwbF/jazzcash-com-pk-logo.png" alt="Logo"></div>
-                            <div class="jc-top-date" id="jc-date">Nov 16, 2026 | 8:01 PM</div>
-                            <div class="jc-top-status">Transaction Successful</div>
-                            <div class="jc-top-sub">Transferred to JazzCash</div>
-                            <div class="jc-card">
-                                <div class="jc-cut left"></div><div class="jc-cut right"></div>
-                                <div class="jc-amount" id="jc-amount">Rs. 500<sup>.00</sup></div>
-                                <div class="jc-transferred">transferred to</div>
-                                <div class="jc-receiver" id="jc-receiver">MUHAMMAD USAMA</div>
-                                <div class="jc-acc">Account # <span id="jc-receiverAcc">03458765896</span></div>
-                                <div class="jc-dashed"></div>
-                                <div class="jc-row"><span class="jc-label">Transaction Fee</span><span class="jc-badge">Free</span></div>
-                                <div class="jc-dashed"></div>
-                                <div class="jc-row"><span class="jc-label">From</span><div class="jc-from-right"><div class="jc-from-name" id="jc-sender">IBAD KHAN</div><div class="jc-from-acc">Account # <span id="jc-senderAcc">03475044076</span></div></div></div>
-                                <div class="jc-dashed"></div>
-                                <div class="jc-tid-row"><span class="jc-label">TID</span><span class="jc-tid-val" id="jc-tid">096924867906</span></div>
+                    <!-- 3. MEEZAN BANK -->
+                    <div class="receipt-wrapper" id="receipt-meezan">
+                        <div class="mz-wrapper" id="card-meezan">
+                            <div class="mz-logo-top"><img src="https://i.postimg.cc/yYcYrNPy/meezan-bank-logo.png" alt="Meezan Bank"></div>
+                            <div class="mz-success-text">Transaction Successful</div>
+                            <div class="mz-amount" id="mz-amount">PKR 50,000</div>
+                            <div class="mz-date" id="mz-date">Nov 16, 2026 | 8:01 PM</div>
+                            
+                            <div class="mz-dashed-line"></div>
+                            
+                            <div class="mz-account-row">
+                                <div class="mz-acc-icon"><img src="https://i.postimg.cc/yYcYrNPy/meezan-bank-logo.png" alt="Meezan"></div>
+                                <div class="mz-acc-details">
+                                    <div class="mz-acc-label">From Account:</div>
+                                    <div class="mz-acc-name" id="mz-sender">ARSLAN</div>
+                                    <div class="mz-acc-num" id="mz-senderAcc">0329xxx9951</div>
+                                </div>
                             </div>
-                            <div class="jc-footer">Securely sent via <img src="https://i.postimg.cc/kGhyDwbF/jazzcash-com-pk-logo.png" alt="Logo"></div>
+                            
+                            <div class="mz-account-row">
+                                <div class="mz-acc-icon"><img src="https://i.postimg.cc/yYcYrNPy/meezan-bank-logo.png" alt="Meezan"></div>
+                                <div class="mz-acc-details">
+                                    <div class="mz-acc-label">To Account:</div>
+                                    <div class="mz-acc-name" id="mz-receiver">MUHAMMAD YOUNAS</div>
+                                    <div class="mz-acc-num" id="mz-receiverAcc">0302xxx5655</div>
+                                </div>
+                            </div>
+
+                            <div class="mz-dashed-line"></div>
+
+                            <div class="mz-ref-section">
+                                <div class="mz-ref-text">Reference Number (STAN): <span id="mz-tid">867906</span></div>
+                                <div class="mz-type-text">Transaction Type: 1LINK | IBFT</div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Baaki receipts (UPaisa, Sadapay, Nayapay, Meezan) ka HTML yahan aayega -->
-                    <!-- (Aapke pichle code se copy karke paste kar dein, sirf unka ID card-[appname] rakhna hai taake download kaam kare) -->
+                    <!-- 4. NAYAPAY -->
+                    <div class="receipt-wrapper" id="receipt-nayapay">
+                        <div class="np-wrapper" id="card-nayapay">
+                            <div class="np-logo-top"><img src="https://i.postimg.cc/9MmWDt5G/nayapay-logo.png" alt="NayaPay"></div>
+                            <div class="np-name-top" id="np-sender">Arslan</div>
+                            <div class="np-bank-top">Meezan Bank-8905</div>
+                            <div class="np-amount" id="np-amount">Rs. 50,000</div>
+                            <div class="np-date" id="np-date">Nov 16, 2026 | 8:01 PM</div>
+                            
+                            <div class="np-card">
+                                <div class="np-row"><span class="np-label">Amount Sent</span><span class="np-val" id="np-amount-sent">Rs. 50,000</span></div>
+                                <div class="np-row"><span class="np-label">Service Fee (Incl. Tax)</span><span class="np-val">Rs. 0</span></div>
+                                <div class="np-row np-border-top"><span class="np-label" style="font-weight: 700; color: #111827;">Total Amount</span><span class="np-val" id="np-total">Rs. 50,000</span></div>
+                            </div>
+
+                            <div class="np-card">
+                                <div class="np-row" style="margin-bottom: 0;"><span class="np-label" style="font-weight: 700; color: #111827; font-size: 15px;">Transaction ID</span><span class="np-val" style="font-size: 15px;" id="np-tid">MEE096924867906 <i class="fa-regular fa-copy"></i></span></div>
+                            </div>
+
+                            <div class="np-card">
+                                <div class="np-add-info-title">ADDITIONAL INFORMATION</div>
+                                <div class="np-row"><span class="np-label">Source Acc. Title</span><span class="np-val" id="np-source-title">Arslan</span></div>
+                                <div class="np-row"><span class="np-label">Source Bank</span><span class="np-val">Meezan Bank</span></div>
+                                <div class="np-row"><span class="np-label">Raast ID / IBAN</span><span class="np-val">****8905</span></div>
+                                <div class="np-row"><span class="np-label">Destination Acc. Title</span><span class="np-val" id="np-dest-title">Muhammad Younas</span></div>
+                                <div class="np-row" style="margin-bottom: 0;"><span class="np-label">Channel</span><span class="np-val">Raast</span></div>
+                            </div>
+
+                            <div class="np-footer">Send with <span>NayaPay</span></div>
+                        </div>
+                    </div>
+
+                    <!-- 5. SADAPAY -->
+                    <div class="receipt-wrapper" id="receipt-sadapay">
+                        <div class="sp-wrapper" id="card-sadapay">
+                            <div class="sp-top-brand">
+                                <img src="https://i.postimg.cc/B67GtrBw/Sadapay-Logo.png" alt="SadaPay">
+                                <span>SADAPAY</span>
+                            </div>
+                            
+                            <div class="sp-card">
+                                <div class="sp-icon-circle"><i class="fa-solid fa-check"></i></div>
+                                <div class="sp-amount" id="sp-amount">Rs. 50,000</div>
+                                <div class="sp-names">
+                                    <div id="sp-sender">Arslan <span>to</span></div>
+                                    <div id="sp-receiver">Muhammad Younas</div>
+                                </div>
+
+                                <div class="sp-details-left">
+                                    <div class="sp-label">Date & Time (PKT)</div>
+                                    <div class="sp-val" id="sp-date">Nov 16, 2026 | 8:01 PM</div>
+                                </div>
+
+                                <div class="sp-details-left">
+                                    <div class="sp-label">Receiver's Account</div>
+                                    <div class="sp-val">SadaPay * 5655</div>
+                                </div>
+
+                                <div class="sp-details-left" style="margin-bottom: 0;">
+                                    <div class="sp-label">Reference Number</div>
+                                    <div class="sp-val" id="sp-tid">SADA-867906</div>
+                                </div>
+                            </div>
+                            
+                            <div class="sp-footer-text">SADAPAY • DIGITALLY BETTER</div>
+                        </div>
+                    </div>
+
+                    <!-- 6. UPAISA -->
+                    <div class="receipt-wrapper" id="receipt-upaisa">
+                        <div class="up-wrapper" id="card-upaisa">
+                            <div class="up-header">Transaction Details</div>
+                            <div class="up-sub-header">Transaction Receipt</div>
+                            
+                            <div class="up-line"></div>
+                            
+                            <div class="up-row"><span class="up-label">Transaction ID:</span><span class="up-val-orange" id="up-tid">096924867906</span></div>
+                            <div class="up-row"><span class="up-label">Date:</span><span class="up-val" id="up-date">Nov 16, 2026 | 8:01 PM</span></div>
+                            <div class="up-row"><span class="up-label">Transaction Type:</span><span class="up-val">UPaisa Wallet</span></div>
+                            <div class="up-row"><span class="up-label">Receiver Name:</span><span class="up-val" id="up-receiver">MUHAMMAD YOUNAS</span></div>
+                            <div class="up-row"><span class="up-label">Receiver Bank:</span><span class="up-val">UPaisa</span></div>
+                            <div class="up-row"><span class="up-label">Receiver A/C No.:</span><span class="up-val" id="up-receiverAcc">03027625655</span></div>
+                            <div class="up-row"><span class="up-label">Amount:</span><span class="up-val" id="up-amount">Rs. 50,000.00</span></div>
+                            <div class="up-row"><span class="up-label">Fee:</span><span class="up-val">Rs. 0.00</span></div>
+                            
+                            <div class="up-line" style="margin-top: 10px; margin-bottom: 15px;"></div>
+                            
+                            <div class="up-total-row"><span class="up-label" style="color: #111827; font-size: 15px;">Total Amount:</span><span id="up-total">Rs. 50,000.00</span></div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- DOWNLOAD BUTTON (Only shows if premium) -->
+                <!-- DOWNLOAD BUTTON -->
                 <button type="button" class="btn-download" id="downloadBtn" onclick="downloadReceipt()" style="display: none;">
                     <i class="fa-solid fa-download"></i> Download Receipt
                 </button>
@@ -401,11 +575,9 @@
         let currentUser = "";
         let isPremium = false;
 
-        // --- AUTO LOGIN CHECK ---
         window.onload = function() {
             const savedUser = localStorage.getItem('km_logged_in_user');
             if(savedUser) {
-                // If session exists, auto login
                 checkUserAndLogin(savedUser);
             } else {
                 showScreen('loginScreen');
@@ -419,12 +591,9 @@
             document.querySelectorAll('.auth-screen').forEach(el => el.classList.remove('active'));
             document.getElementById(screenId).classList.add('active');
             document.querySelectorAll('.error-msg').forEach(el => el.style.display = 'none');
-            
-            // Hide main apps when showing auth screens
             document.querySelectorAll('.main-app').forEach(el => el.classList.remove('active'));
         };
 
-        // --- AUTH FUNCTIONS ---
         window.signup = async function() {
             const user = document.getElementById('signupUser').value.trim();
             const pass = document.getElementById('signupPass').value.trim();
@@ -467,7 +636,6 @@
                     return;
                 }
                 
-                // Save session
                 localStorage.setItem('km_logged_in_user', user);
                 checkUserAndLogin(user, data);
 
@@ -477,7 +645,6 @@
         async function checkUserAndLogin(user, existingData = null) {
             let data = existingData;
             if(!data) {
-                // Fetch data if coming from auto-login
                 const dbRef = ref(db);
                 const snapshot = await get(child(dbRef, `users/${user}`));
                 if(!snapshot.exists()) {
@@ -488,7 +655,6 @@
                 data = snapshot.val();
             }
 
-            // Check Premium
             if(data.isPremium && data.expiry > Date.now()) {
                 isPremium = true;
             } else {
@@ -500,12 +666,10 @@
             document.getElementById('displayUsername').innerText = user;
             document.getElementById('premiumStatusText').innerText = isPremium ? "Premium User" : "Free Account";
 
-            // Switch UI
             document.querySelectorAll('.auth-screen').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.main-app').forEach(el => el.classList.remove('active'));
             document.getElementById('userApp').classList.add('active');
             
-            // Reset Preview Area
             document.getElementById('receiptDisplayArea').style.display = 'none';
             document.getElementById('downloadBtn').style.display = 'none';
             document.getElementById('lockOverlay').style.display = 'flex';
@@ -518,13 +682,10 @@
             showScreen('loginScreen');
         };
 
-        // --- GENERATE RECEIPT LOGIC (THE GATEKEEPER) ---
         window.generateReceipt = function() {
             if(!isPremium) {
-                // Show plans modal
                 document.getElementById('plansModal').classList.add('active');
             } else {
-                // Premium user, show receipt
                 document.getElementById('receiptDisplayArea').style.display = 'block';
                 document.getElementById('downloadBtn').style.display = 'flex';
                 document.getElementById('lockOverlay').style.display = 'none';
@@ -542,75 +703,6 @@
             window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
         };
 
-        // --- ADMIN FUNCTIONS ---
-        window.adminLogin = function() {
-            const u = document.getElementById('adminUser').value;
-            const p = document.getElementById('adminPass').value;
-            if(u === 'admin' && p === 'admin123') {
-                document.querySelectorAll('.auth-screen').forEach(el => el.classList.remove('active'));
-                document.querySelectorAll('.main-app').forEach(el => el.classList.remove('active'));
-                document.getElementById('adminDashboard').classList.add('active');
-                loadAdminUsers();
-            } else {
-                document.getElementById('adminError').style.display = 'block';
-            }
-        };
-
-        async function loadAdminUsers() {
-            const dbRef = ref(db, 'users');
-            const listDiv = document.getElementById('usersList');
-            listDiv.innerHTML = "Loading...";
-            try {
-                const snapshot = await get(dbRef);
-                listDiv.innerHTML = "";
-                if (snapshot.exists()) {
-                    const users = snapshot.val();
-                    for (const key in users) {
-                        const u = users[key];
-                        const expiryDate = u.expiry > 0 ? new Date(u.expiry).toLocaleDateString() : 'N/A';
-                        const status = (u.isPremium && u.expiry > Date.now()) ? `<span style="color:green;">Premium (Exp: ${expiryDate})</span>` : `<span style="color:red;">Free</span>`;
-                        
-                        listDiv.innerHTML += `
-                            <div class="user-row">
-                                <div style="display:flex; justify-content:space-between; align-items:center;">
-                                    <div style="font-weight:bold; font-size:14px;">${key}</div>
-                                    <div style="font-size:11px; color:#6b7280;">Status: ${status}</div>
-                                </div>
-                                <div style="display:flex; justify-content:flex-end; gap:5px; align-items:center;">
-                                    <select id="plan-${key}" class="admin-select">
-                                        <option value="7">7 Days</option>
-                                        <option value="15">15 Days</option>
-                                        <option value="30">30 Days</option>
-                                    </select>
-                                    <button onclick="makePremium('${key}')" class="btn-admin">Set Premium</button>
-                                </div>
-                            </div>
-                        `;
-                    }
-                } else {
-                    listDiv.innerHTML = "No users found.";
-                }
-            } catch (e) {
-                listDiv.innerHTML = "Error loading users. Check DB rules.";
-            }
-        }
-
-        window.makePremium = async function(username) {
-            const daysSelect = document.getElementById(`plan-${username}`);
-            const days = parseInt(daysSelect.value);
-            const expiry = Date.now() + (days * 24 * 60 * 60 * 1000);
-            
-            try {
-                await update(ref(db, `users/${username}`), {
-                    isPremium: true,
-                    expiry: expiry
-                });
-                alert(`✅ ${username} is now Premium for ${days} days!`);
-                loadAdminUsers(); // Refresh list
-            } catch(e) { alert("Error updating user: " + e.message); }
-        };
-
-        // --- RECEIPT PREVIEW LOGIC ---
         window.selectApp = function(appName, element) {
             currentApp = appName;
             document.querySelectorAll('.app-box').forEach(box => box.classList.remove('active'));
@@ -623,36 +715,81 @@
 
         window.updateAll = function() {
             const date = document.getElementById('inputDate').value || 'N/A';
-            const amount = document.getElementById('inputAmount').value || '0';
+            const amountVal = document.getElementById('inputAmount').value || '0';
             const receiver = document.getElementById('inputReceiver').value || 'N/A';
             const receiverAcc = document.getElementById('inputReceiverAcc').value || 'N/A';
             const sender = document.getElementById('inputSender').value || 'N/A';
             const senderAcc = document.getElementById('inputSenderAcc').value || 'N/A';
             const tid = document.getElementById('inputTid').value || 'N/A';
 
-            const formattedAmount = Number(amount).toLocaleString('en-US');
-            const shortAcc = receiverAcc.length > 4 ? receiverAcc.slice(-4) : receiverAcc;
+            const formattedAmount = Number(amountVal).toLocaleString('en-US');
             const toTitleCase = (str) => str.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(' ');
+            const upperCase = (str) => str.toUpperCase();
+            
+            // Masking for specific formats based on input
+            const shortAccMasked = receiverAcc.length > 4 ? receiverAcc.slice(0, 4) + 'xxx' + receiverAcc.slice(-4) : receiverAcc;
+            const senderAccMasked = senderAcc.length > 4 ? senderAcc.slice(0, 4) + 'xxx' + senderAcc.slice(-4) : senderAcc;
+            const shortTid = tid.length > 6 ? tid.slice(-6) : tid;
 
-            // Easypaisa
+            // 1. JazzCash
+            if(document.getElementById('jc-amount')) {
+                document.getElementById('jc-date').innerText = date;
+                document.getElementById('jc-amount').innerHTML = 'Rs. ' + formattedAmount + '<sup>.00</sup>';
+                document.getElementById('jc-receiver').innerText = upperCase(receiver);
+                document.getElementById('jc-receiverAcc').innerText = receiverAcc;
+                document.getElementById('jc-sender').innerText = upperCase(sender);
+                document.getElementById('jc-senderAcc').innerText = senderAcc;
+                document.getElementById('jc-tid').innerText = tid;
+            }
+
+            // 2. Easypaisa
             if(document.getElementById('ep-amount')) {
                 document.getElementById('ep-amount').innerHTML = 'Rs. ' + formattedAmount + '<span>.00</span>';
                 document.getElementById('ep-receiver').innerText = toTitleCase(receiver);
                 document.getElementById('ep-receiverAcc').innerText = receiverAcc;
             }
 
-            // JazzCash
-            if(document.getElementById('jc-date')) {
-                document.getElementById('jc-date').innerText = date;
-                document.getElementById('jc-amount').innerHTML = 'Rs. ' + formattedAmount + '<sup>.00</sup>';
-                document.getElementById('jc-receiver').innerText = receiver.toUpperCase();
-                document.getElementById('jc-receiverAcc').innerText = receiverAcc;
-                document.getElementById('jc-sender').innerText = sender.toUpperCase();
-                document.getElementById('jc-senderAcc').innerText = senderAcc;
-                document.getElementById('jc-tid').innerText = tid;
+            // 3. Meezan Bank
+            if(document.getElementById('mz-amount')) {
+                document.getElementById('mz-amount').innerText = 'PKR ' + formattedAmount;
+                document.getElementById('mz-date').innerText = date;
+                document.getElementById('mz-sender').innerText = upperCase(sender);
+                document.getElementById('mz-senderAcc').innerText = senderAcc;
+                document.getElementById('mz-receiver').innerText = upperCase(receiver);
+                document.getElementById('mz-receiverAcc').innerText = shortAccMasked;
+                document.getElementById('mz-tid').innerText = shortTid;
             }
-            
-            // Baaki apps ki values update karne ka code yahan aayega...
+
+            // 4. NayaPay
+            if(document.getElementById('np-amount')) {
+                document.getElementById('np-amount').innerText = 'Rs. ' + formattedAmount;
+                document.getElementById('np-date').innerText = date;
+                document.getElementById('np-sender').innerText = toTitleCase(sender);
+                document.getElementById('np-source-title').innerText = toTitleCase(sender);
+                document.getElementById('np-dest-title').innerText = toTitleCase(receiver);
+                document.getElementById('np-amount-sent').innerText = 'Rs. ' + formattedAmount;
+                document.getElementById('np-total').innerText = 'Rs. ' + formattedAmount;
+                document.getElementById('np-tid').innerHTML = 'MEE' + tid + ' <i class="fa-regular fa-copy"></i>';
+            }
+
+            // 5. SadaPay
+            if(document.getElementById('sp-amount')) {
+                document.getElementById('sp-amount').innerText = 'Rs. ' + formattedAmount;
+                document.getElementById('sp-date').innerText = date;
+                document.getElementById('sp-sender').innerHTML = toTitleCase(sender) + ' <span>to</span>';
+                document.getElementById('sp-receiver').innerText = toTitleCase(receiver);
+                document.getElementById('sp-tid').innerText = 'SADA-' + shortTid;
+            }
+
+            // 6. UPaisa
+            if(document.getElementById('up-amount')) {
+                document.getElementById('up-tid').innerText = tid;
+                document.getElementById('up-date').innerText = date;
+                document.getElementById('up-receiver').innerText = upperCase(receiver);
+                document.getElementById('up-receiverAcc').innerText = receiverAcc;
+                document.getElementById('up-amount').innerText = 'Rs. ' + formattedAmount + '.00';
+                document.getElementById('up-total').innerText = 'Rs. ' + formattedAmount + '.00';
+            }
         };
 
         window.downloadReceipt = function() {
